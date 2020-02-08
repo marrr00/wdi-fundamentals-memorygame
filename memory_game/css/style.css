@@ -1,0 +1,95 @@
+
+h1 {
+font-family: "Raleway", sans-serif;
+color: #FFFFFF;
+letter-spacing: 1px;
+font-weight: 400;
+font-size: 45px;
+margin: 0;
+}
+a:hover{
+  font-family: "Raleway" , sans-serif;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-decoration:none;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  border-color: #FFFFFF;
+
+}
+
+h2{
+  font-family: "Raleway" , sans-serif;
+  color: #0D2C40;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+p {
+font-family: "Droid Serif", serif;
+line-height: 26px;
+font-size: 18px;
+}
+
+body {
+text-align: center;
+margin: 0;
+}
+header{
+  background-color: #F15B31;
+  color: #FFFFFF;
+  padding: 30px 20px;
+  text-transform:uppercase ;
+
+}
+nav{
+  background-color: #00A6B3;
+  color:#FFFFFF;
+  padding: 20px 0px;
+
+
+}
+main{
+  width: 850px;
+  margin: 35px auto;
+}
+img{
+  margin-top: 40px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+footer{
+  text-transform: uppercase;
+  padding-left: 20px;
+  padding-right:20px;
+  background-color: #0D2C40;
+  color:#FFFFFF;
+  font-size: 14px;
+  letter-spacing: .08em;
+  font-weight: 500;
+}
+.copyright{
+  font-family: "Raleway", sans-serif;
+  float: left;
+}
+.message{
+  font-family: "Raleway", sans-serif;
+  float: right;
+}
+.clearfix:after {
+visibility: hidden;
+display: block;
+content: " ";
+clear: both;
+height: 0;
+font-size: 0;
+}
+.name{
+  color: #F15B31;
+  font-weight: 700;
+}
