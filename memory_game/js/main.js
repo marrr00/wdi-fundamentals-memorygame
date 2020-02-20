@@ -1,7 +1,11 @@
 //Check JavaScript code work by print in the console 'Up and running!'
 console.log("Up and running!");
+
+//Store the Score
+let score = 0;
 //Create Array to Store Cards Played
 let cardsInPlay = [];
+
 //Create Array to Store 4 Cards info as Object
 const cards = [
   {
@@ -33,9 +37,28 @@ const cards = [
 function checkForMatch(){
   //if condition
     if(cardsInPlay[0]===cardsInPlay[1]){
+      //Increase the Score
+      score++;
+
+      //alert
       alert('you find a Match !');
+      alert('Your Score Is '+ score);
+
+      //clear cardsInPlay array for next game
+      for (let i=0;i<=cardsInPlay.length;i++){
+        cardsInPlay.pop();
+
+      }//loop
     }else{
-      alert('Sorry, tray again ..')
+      //alert
+      alert('Sorry, tray again ..');
+
+      //clear cardsInPlay array for next game
+      for (let i=0;i<=cardsInPlay.length;i++){
+        cardsInPlay.pop();
+
+      }//loop
+    
     }
 }//function
 
@@ -51,9 +74,9 @@ function flipCard(){
 
   //display the image of the played card
   this.setAttribute('src',cards[cardId].cardImage);
-  
+
   //Checking Two Card are Played
-  if(cardsInPlay.length === 2){
+  if(cardsInPlay.length >= 2){
      checkForMatch();
   }
 }//function
@@ -61,6 +84,7 @@ function flipCard(){
 //********* function numberThree ********
 //# function create new game
 function createBoard(){
+
   for (let i = 0;i < cards.length;i++){
 
     // varible create element cards
@@ -79,6 +103,38 @@ function createBoard(){
     document.getElementById('game-board').appendChild(cardElement);
 
   }//loop
+
+ //Create reset Button element
+ let resetElement = document.createElement('img');
+
+ //set image
+ resetElement.setAttribute('src','images/reset.png');
+
+ //add event listener
+ resetElement.addEventListener('click',resetCards);
+
+ //append child
+ document.getElementById('resetButton').appendChild(resetElement);
+
+}//function
+
+//********* Bunes function *********
+// # function Reset the Game
+function resetCards(){
+  //Store index of cards by traversing html elements
+  let firstCard = document.getElementById('game-board').firstChild;
+  let secondCard = firstCard.nextSibling;
+  let thirdCard = secondCard.nextSibling;
+  let fourthCard = thirdCard.nextSibling;
+
+  //Set cards to thier back image
+  firstCard.setAttribute('src', 'images/back.png' );
+  secondCard.setAttribute('src', 'images/back.png' );
+  thirdCard.setAttribute('src', 'images/back.png' );
+  fourthCard.setAttribute('src', 'images/back.png' );
+
+
+
 }//function
 
 //####### Calling function & Start the Game #######
